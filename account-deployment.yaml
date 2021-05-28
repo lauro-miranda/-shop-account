@@ -1,0 +1,21 @@
+#kubectl api-resources
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: account
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: shop-account-nginx
+  template:
+    metadata:      
+      labels:
+        app: shop-account-nginx
+    spec:
+      containers:
+        - name: site
+          image: lauromiranda/shop-account          
+          env:
+            - name: ASPNETCORE_ENVIRONMENT
+              value: Development
