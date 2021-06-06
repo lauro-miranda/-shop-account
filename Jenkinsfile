@@ -11,8 +11,7 @@ pipeline {
 
         stage ('Build') {
             steps {
-                script {
-                    ls
+                script {                    
                     dockerapp = docker.build("lauromiranda/shop-account:${env.BUILD_ID}",
                     '-f ./app/ToSoftware.Shop.Accounts.Api/Dockerfile .')
                 }
