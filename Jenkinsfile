@@ -13,7 +13,7 @@ pipeline {
             steps {
                 script {
                     dockerapp = docker.build("lauromiranda/shop-account:${env.BUILD_ID}",
-                    '-f ./src/ToSoftware.Shop.Accounts.Api/Dockerfile .')
+                    '-f Dockerfile .')
                 }
             }
         }
