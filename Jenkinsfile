@@ -9,10 +9,6 @@ pipeline {
             }
         }
 
-    }
-
-    stages {
-
         stage ('Build') {
             steps {
                 script {
@@ -21,10 +17,6 @@ pipeline {
                 }
             }
         }
-
-    }
-
-    stages {
 
         stage ('Push') {
             steps {
